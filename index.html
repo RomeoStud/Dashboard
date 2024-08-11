@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRM Dashboard</title>
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="dashboard__sidebar sidebar">
+        <div class="dashboard__logo">
+          <a href="/">
+            <img src="./images/logo.svg" alt="Logo" />
+          </a>
+          <h1 class="dashboard__logo-text">
+            Dashboard<span class="dashboard__span">.v1</span>
+          </h1>
+        </div>
+        <nav class="sidebar__nav">
+          <ul class="sidebar__list">
+            <li class="sidebar__class">
+              <a class="sidebar__link" href="#">
+                <a class="sidebar__icon" href="/">
+                  <img src="./images/key-square.svg" alt="Icon" />
+                </a>
+                <h2 class="sidebar__title">Dashboard</h2>
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <div class="sidebar__int">
+                <a href="/">
+                  <img src="./images/3d-square 1.svg" alt="Icon" />
+                </a>
+                <h2 class="sidebar__title">Product</h2>
+              </div>
+              <a href="/">
+                <img src="./images/chevron-right 2.svg" alt="Icon" />
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <div class="sidebar__int">
+                <a href="/">
+                  <img src="./images/user-square 1.svg" alt="Icon" />
+                </a>
+                <h2 class="sidebar__title">Customers</h2>
+              </div>
+              <a href="/">
+                <img src="./images/chevron-right 2.svg" alt="Icon" />
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <div class="sidebar__int">
+                <a href="/">
+                  <img src="./images/wallet-money 2.svg" alt="Icon" />
+                </a>
+                <h2 class="sidebar__title">Income</h2>
+              </div>
+              <a href="/">
+                <img src="./images/chevron-right 2.svg" alt="Icon" />
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <div class="sidebar__int">
+                <a href="/">
+                  <img src="./images/discount-shape 1.svg" alt="Icon" />
+                </a>
+                <h2 class="sidebar__title">Promote</h2>
+              </div>
+              <a href="/">
+                <img src="./images/chevron-right 2.svg" alt="Icon" />
+              </a>
+            </li>
+            <li class="sidebar__item">
+              <div class="sidebar__int">
+                <a href="/">
+                  <img src="./images/message-question 1.svg" alt="Icon" />
+                </a>
+                <h2 class="sidebar__title">Help</h2>
+              </div>
+              <a href="/">
+                <img src="./images/chevron-right 2.svg" alt="Icon" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="sidebar__footer">
+          <img id="user-photo" alt="user-foto" class="user__photo" />
+          <div class="user-info">
+            <h2 id="user-name"></h2>
+            <p id="user-trade"></p>
+          </div>
+        </div>
+      </aside>
+      <main class="dashboard__main main">
+        <header class="main__header">
+          <h1 id="greeting"></h1>
+          <div class="mobile-header">
+            <div class="mobile-logo">
+              <a href="/">
+                <img src="./images/logo.svg" alt="Logo" />
+              </a>
+              <h1 class="dashboard__logo-text">
+                Dashboard<span class="dashboard__span">.v1</span>
+              </h1>
+            </div>
+            <nav class="mobile-sidebar-menu">
+              <a href="#">Dashboard</a>
+              <a href="#">Product</a>
+              <a href="#">Customers</a>
+              <a href="#">Income</a>
+              <a href="#">Promote</a>
+              <a href="#">Help</a>
+            </nav>
+          </div>
+        </header>
+        <div
+          id="statistics-block"
+          class="statistics-block"
+          style="display: none"
+        >
+          <h2>Search Statistics</h2>
+          <p id="total-customers">Total customers found: 0</p>
+          <p id="active-customers">Active customers: 0</p>
+          <p id="inactive-customers">Inactive customers: 0</p>
+        </div>
+        <section class="main__content content">
+          <div class="content__header">
+            <h1 class="content__title">All Customers</h1>
+            <div class="content__block">
+              <p class="content__subtitle" id="active-members-count">
+                Active members
+              </p>
+              <div class="search-container">
+                <input
+                  id="search-input"
+                  class="search-input"
+                  type="text"
+                  placeholder="Search"
+                />
+                <div class="search-icon">
+                  <img src="./images/search 1.svg" alt="Icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <table class="content__table table">
+            <thead>
+              <tr class="table__row">
+                <th class="table__header">Customer Name</th>
+                <th class="table__header">Company</th>
+                <th class="table__header">Phone Number</th>
+                <th class="table__header">Email</th>
+                <th class="table__header">Country</th>
+                <th class="table__header">Status</th>
+              </tr>
+            </thead>
+            <tbody class="table__body" id="customer-table-body"></tbody>
+          </table>
+          <div class="content__footer">
+            <p class="content__footer-text">
+              showing data 1 to 8 of 256K entries
+            </p>
+            <div class="content__pagination pagination">
+              <button class="pagination__button pagination__prev" type="button">
+                <a href="/">
+                  <img src="./images/chevron-left-s.svg" alt="Icon" />
+                </a>
+              </button>
+              <button class="pagination__button">1</button>
+              <button class="pagination__button">2</button>
+              <button class="pagination__button">3</button>
+              <button class="pagination__button">4</button>
+              <button class="pagination__button">...</button>
+              <button class="pagination__button">40</button>
+              <button class="pagination__button pagination__prev" type="button">
+                <a href="/">
+                  <img src="./images/chevron-right-s.svg" alt="Icon" />
+                </a>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

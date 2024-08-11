@@ -1,0 +1,135 @@
+doctype html
+html(lang="uk")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title CRM Dashboard
+    link(rel="stylesheet", href="./css/main.min.css")
+
+  body
+    .dashboard
+      aside.dashboard__sidebar.sidebar
+        .dashboard__logo
+          a(href="/")
+            img(src="./images/logo.svg", alt="Logo")
+          h1.dashboard__logo-text
+            | Dashboard
+            span.dashboard__span .v1
+
+        nav.sidebar__nav
+          ul.sidebar__list
+            li.sidebar__class
+              a.sidebar__link(href="#")
+                a.sidebar__icon(href="/")
+                  img(src="./images/key-square.svg", alt="Icon")
+                h2.sidebar__title Dashboard
+
+            li.sidebar__item
+              .sidebar__int
+                a(href="/")
+                  img(src="./images/3d-square 1.svg", alt="Icon")
+                h2.sidebar__title Product
+              a(href="/")
+                img(src="./images/chevron-right 2.svg", alt="Icon")
+
+            li.sidebar__item
+              .sidebar__int
+                a(href="/")
+                  img(src="./images/user-square 1.svg", alt="Icon")
+                h2.sidebar__title Customers
+              a(href="/")
+                img(src="./images/chevron-right 2.svg", alt="Icon")
+
+            li.sidebar__item
+              .sidebar__int
+                a(href="/")
+                  img(src="./images/wallet-money 2.svg", alt="Icon")
+                h2.sidebar__title Income
+              a(href="/")
+                img(src="./images/chevron-right 2.svg", alt="Icon")
+
+            li.sidebar__item
+              .sidebar__int
+                a(href="/")
+                  img(src="./images/discount-shape 1.svg", alt="Icon")
+                h2.sidebar__title Promote
+              a(href="/")
+                img(src="./images/chevron-right 2.svg", alt="Icon")
+
+            li.sidebar__item
+              .sidebar__int
+                a(href="/")
+                  img(src="./images/message-question 1.svg", alt="Icon")
+                h2.sidebar__title Help
+              a(href="/")
+                img(src="./images/chevron-right 2.svg", alt="Icon")
+
+        .sidebar__footer
+          img#user-photo.user__photo(alt="user-photo")
+          .user-info
+            h2#user-name
+            p#user-trade
+
+      main.dashboard__main.main
+        header.main__header
+          h1#greeting
+          .mobile-header
+            .mobile-logo
+              a(href="/")
+                img(src="./images/logo.svg", alt="Logo")
+              h1.dashboard__logo-text
+                | Dashboard
+                span.dashboard__span .v1
+
+            nav.mobile-sidebar-menu
+              a(href="#") Dashboard
+              a(href="#") Product
+              a(href="#") Customers
+              a(href="#") Income
+              a(href="#") Promote
+              a(href="#") Help
+
+        #statistics-block.statistics-block(style="display: none")
+          h2 Search Statistics
+          p#total-customers Total customers found: 0
+          p#active-customers Active customers: 0
+          p#inactive-customers Inactive customers: 0
+
+        section.main__content.content
+          .content__header
+            h1.content__title All Customers
+            .content__block
+              p#active-members-count.content__subtitle Active members
+              .search-container
+                input#search-input.search-input(type="text", placeholder="Search")
+                .search-icon
+                  img(src="./images/search 1.svg", alt="Icon")
+
+          table.content__table.table
+            thead
+              tr.table__row
+                th.table__header Customer Name
+                th.table__header Company
+                th.table__header Phone Number
+                th.table__header Email
+                th.table__header Country
+                th.table__header Status
+            tbody#customer-table-body.table__body
+
+          .content__footer
+            p.content__footer-text showing data 1 to 8 of 256K entries
+            .content__pagination.pagination
+              button.pagination__button.pagination__prev(type="button")
+                a(href="/")
+                  img(src="./images/chevron-left-s.svg", alt="Icon")
+              button.pagination__button 1
+              button.pagination__button 2
+              button.pagination__button 3
+              button.pagination__button 4
+              button.pagination__button ...
+              button.pagination__button 40
+              button.pagination__button.pagination__prev(type="button")
+                a(href="/")
+                  img(src="./images/chevron-right-s.svg", alt="Icon")
+
+    script(src="script.js")
